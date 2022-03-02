@@ -1,0 +1,270 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    display: block;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+/*--------Header---------*/
+
+.navbar{
+    z-index: 2;
+    display:block;
+    position:fixed;
+    top: 0;
+    border-bottom: 1px solid #d3cbcb!important;
+    background-color:white;
+    width: 98%;
+}
+
+.primary-logo-text{
+    color: #F4B183; 
+}
+
+.second-logo-text{
+    color: #333333;
+}
+
+.navbar-brand img{
+    height: 50px;
+    width: 50px;
+}
+
+.navbar-brand span{
+    font-size: 30px;
+}
+
+.cross-vertical{
+    border-right: 3px solid #333333!important;
+    height: 35px;
+    margin-top: 14px;
+}
+
+.nav-link{
+    color: #333333 !important;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.nav-item-text{
+    display: flex;
+    margin:6px 35px 0 35px;
+    text-align: center;
+}
+
+.nav-item-text a:hover{
+    color: #F4B183 !important;
+}
+
+.icon-cart{
+    margin-top: 6px;
+}
+
+/*--------Carousel--------------*/
+
+.carousel{
+    margin-top: 120px;
+    overflow: hidden;
+    margin-left: 0px;
+}
+
+.carousel-item{
+    z-index: 1;
+    height: 600px;
+}
+
+.carousel-item img{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+/*--------List-Products---------*/
+
+.list-products{
+    z-index: 1;
+}
+
+.product{
+    margin-top: 30px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.product-image{
+    width:100%;
+    height: 300px;
+}
+
+.product-image img{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-name{
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product-name:hover{
+    background-color: #F4B183;
+    color: #333333;
+}
+
+.product-brand{
+    text-transform: uppercase;
+    color:#F4B183;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.product-brand:hover{
+    background-color: #F4B183;
+    color: azure;
+}
+
+.product-price{
+    color: #333333;
+}
+
+.product-price:hover{
+    color: #333333;
+}
+
+.add-cart{
+    color: #333333;
+}
+
+.add-car{
+    color: #333333;
+}
+
+.add-cart:hover{
+    background-color: #F4B183;
+    color: azure;
+}
+
+/*-----------pagination----------------*/
+
+.page-item a{
+    color: #333333 !important;
+}
+
+
+/*---------------------Expand-left---------------------------------*/
+
+.expand-left{
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    width: 1550px;
+    height: 642px;
+    background: rgba(0,0,0, 0.4);
+    animation: showContent all linear 5s;
+    margin-top: -40px;
+}
+
+@keyframes showContent {
+    from {
+      left: -200px;
+      opacity: 0;
+    }
+    to {
+      right: 0;
+      opacity: 1;
+    }
+  }
+
+.expand-content {
+    padding: 20px 10px 10px 10px ;
+    width: 389px;
+    background-color: rgb(255, 255, 255);
+    color: rgba(54, 41, 31, 0.7);
+}
+
+.brand {
+    display: flex;
+    margin-bottom: 50px;
+    height: 160px;
+}
+
+
+.image img{
+    height: 170px;
+    width: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.des {
+    margin-left: 10px;
+    text-align: justify;
+}
+
+.des img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+.brand-name{
+    margin: 5px 0 5px 0;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.brand-name:hover{
+    color: rgba(54, 41, 31, 0.9);
+}
+
+.des span {
+    font-size: 13px;
+}
+
+.prev {
+    margin: 280px 0 0 20px;
+    font-size: 45px;
+    color: rgba(54, 41, 31, 0.4);
+    cursor: pointer;
+}
+
+.prev:hover {
+    color: rgba(54, 41, 31, 0.8);
+}
+
+.hide{
+    display: none;
+}
+
+/*-----------footer----------------*/
+.footer{
+    display: flex;
+    border-top: 1px solid #d3cbcb!important;
+    padding-top: 40px;
+}

@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.contact{
+    display: flex;
+    margin: 0 auto;
+}
+
+.main-infor{
+    text-align: center;
+}
+
+.main-infor img{
+    height: 200px;
+    width: 200px;
+}
+
+.primary-logo-text_contact{
+    color: #333333;
+    font-size: 35px;
+}
+
+.second-logo-text_contact{
+    color: #F4B183;
+}
+
+.gg-map iframe{
+    border-radius: 7px;
+}
+.navbar{
+    position: static !important;    
+}
+
+.expand-left{
+    top: 120px;
+}
