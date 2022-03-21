@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <title>Gracious Garments</title>
 </head>
+
 <body>
     <!--Start header-->
     <div class="container-fluid header">
@@ -43,29 +45,106 @@
                     <a class="nav-link" href="register.html">Register</a>
                 </li>
                 <li class="nav-item nav-item-text">
-                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"> </i>Cart</a>
-
+                    <button class="nav-link cart-button d-flex" type="button" data-toggle="modal"
+                        data-target="#myModal">
+                        Cart <i class="fas fa-shopping-cart icon-cart"></i>
+                    </button>
                 </li>
             </ul>
         </nav>
     </div>
     <!--End header-->
 
+    <!--Start Expand Brand-->
+    <section aria-hidden="false" class="expand-left hide">
+        <div class="expand-content">
+            <div class="brand">
+                <div class="image">
+                    <img src="../images/brand1/preview1.jpg" alt="">
+                </div>
+                <div class="des">
+                    <img src="../images/brandlogos/ggbr1.png" alt="">
+                    <div class="brand-name">HanSoHee</div>
+                    <span>Lorem ipsum dolor sit amet, consectetur adispiscing elit.Quisque diam ante,dapobus luctus
+                        lacinia vel,imperdiet a tortor. Mauris eget</span>
+                </div>
+            </div>
+            <div class="brand">
+                <div class="image">
+                    <img src="../images/brand2/preview.jpg" alt="">
+                </div>
+                <div class="des">
+                    <img src="../images/brandlogos/ggbr2.png" alt="">
+                    <div class="brand-name">Pimchanok</div>
+                    <span>Lorem ipsum dolor sit amet, consectetur adispiscing elit. Quisque diam ante,dapobus luctus
+                        lacinia vel,imperdiet a tortor. Mauris eget</span>
+                </div>
+            </div>
+            <div class="brand">
+                <div class="image">
+                    <img src="../images/brand3/preview.jpg" alt="">
+                </div>
+                <div class="des">
+                    <img src="../images/brandlogos/ggbr3.png" alt="">
+                    <div class="brand-name">Jiyeon</div>
+                    <span>Lorem ipsum dolor sit amet, consectetur adispiscing elit.Quisque diam ante,dapobus luctus
+                        lacinia vel,imperdiet a tortor. Mauris eget</span>
+                </div>
+            </div>
+        </div>
+        <div class="prev">
+            <i class="fas fa-chevron-circle-left"></i>
+        </div>
+    </section>
+    <!--End Expand Brand-->
+
     <!--Start form login-->
     <div class="form-login">
-        <form>
+        <form class="LoginForm" method="POST">
             <div class="form-group">
                 <h3 class="text-center">Login Form</h3>
-               <label for="myUser ">User</label>
-               <input type="text" id = "myUser" class="form-control" placeholder="User" required>
-               <label for="myPassword">Password</label>
-               <input type="password" id="myPassword" class="form-control" placeholder="Password" required>
-               <button type="submit" class="btn btn-primary">Submit</button>
+                <label for="myUser ">User</label>
+                <input type="text" id="UserLogin" class="form-control" placeholder="User" required>
+                <label for="myPassword">Password</label>
+                <input type="password" id="PassLogin" class="form-control" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
-         
-         </form>
+
+        </form>
     </div>
     <!--End form login-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="../js/index.js"></script>
+    <script>
+        var userLogin = document.getElementById('UserLogin');
+        var passLogin = document.getElementById('PassLogin');
+        var loginForm = document.querySelector('.LoginForm');
+        var listUser = []
+
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault()
+            function LoadDuLieu() {
+                if (localStorage) {
+                    listUser = JSON.parse(localStorage.getItem('listUserLocal'));
+                    //console.log(listUser.length);
+                }
+            }
+            LoadDuLieu();
+            for(var i=0;i < listUser.length ;i++){
+                var userI = listUser[i]
+                if(userLogin.value == userI.UserName && passLogin.value == userI.UserPassw){
+                    //console.log(userI.userName,userI.UserPassw)
+                    alert("Login Succes!")
+                    return false;
+                }else{
+                    alert("User or Password not Correct!")
+                }
+            }
+        })
+
+    </script>
 </body>
+
 </html>

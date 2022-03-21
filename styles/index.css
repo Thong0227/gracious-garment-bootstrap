@@ -69,6 +69,20 @@ a{
     margin-top: 6px;
 }
 
+.cart-button{
+    border: none;
+    outline: none;
+    background-color:white;
+}
+
+.cart-button:hover{
+    color: #F4B183 !important;
+}
+
+.show-qty{
+    margin-top: 5px;
+}
+
 /*--------Carousel--------------*/
 
 .carousel{
@@ -91,7 +105,14 @@ a{
     height: 100%;
     object-fit: cover;
     object-position: center;
-    
+}
+
+.carousel-name{
+    color: white;
+}
+
+.carousel-name:hover{
+    color:white;
 }
 
 /*--------List-Products---------*/
@@ -101,13 +122,20 @@ a{
 }
 
 .product{
+    display: block;
     margin-top: 30px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    height: 400px;
 }
 
 .product-image{
     width:100%;
     height: 300px;
+}
+
+.product-image:hover{
+    zoom: 1.2;
+    border: 1px solid #333333;
 }
 
 .product-image img{
@@ -125,7 +153,14 @@ a{
     text-transform: uppercase;
     color: #333333;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 13px;
+    white-space: nowrap; 
+  width: 100%; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  text-align: center;
+  padding: 0 3px 0 3px;
+  margin-bottom: 5px;
 }
 
 .product-name:hover{
@@ -137,7 +172,8 @@ a{
     text-transform: uppercase;
     color:#F4B183;
     font-weight: bold;
-    font-size: 15px;
+    margin-bottom: 5px;
+    font-size: 12px;
 }
 
 .product-brand:hover{
@@ -147,21 +183,26 @@ a{
 
 .product-price{
     color: #333333;
+    font-size: 12px;
+    margin-bottom: 5px;
 }
 
 .product-price:hover{
     color: #333333;
 }
 
-.add-cart{
+.product button{
     color: #333333;
+    border: none;
+    outline: none;
+    background-color:white;
 }
 
 .add-car{
     color: #333333;
 }
 
-.add-cart:hover{
+.product button:hover{
     background-color: #F4B183;
     color: azure;
 }
@@ -179,10 +220,10 @@ a{
     z-index: 2;
     position: fixed;
     display: flex;
-    width: 1550px;
-    height: 642px;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0,0,0, 0.4);
-    animation: showContent all linear 5s;
+    left: 0;
     margin-top: -40px;
 }
 
@@ -202,6 +243,7 @@ a{
     width: 389px;
     background-color: rgb(255, 255, 255);
     color: rgba(54, 41, 31, 0.7);
+    animation: showContent ease-out 1s;
 }
 
 .brand {
@@ -239,8 +281,12 @@ a{
     cursor: pointer;
 }
 
-.brand-name:hover{
-    color: rgba(54, 41, 31, 0.9);
+.brand-name a{
+    color: rgba(54, 41, 31, 0.7);
+}
+
+.brand-name a:hover{
+    color: rgba(54, 41, 31, 1);
 }
 
 .des span {
@@ -260,6 +306,46 @@ a{
 
 .hide{
     display: none;
+}
+
+/*-----------Cart----------------*/
+
+
+.table{
+    text-align: center;
+}
+
+.cart-product_image{
+    height: 180px;
+}
+
+thead{
+    font-size: 13px;
+}
+
+tbody{
+    font-size: 13px;
+}
+
+.cart-product_image img{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cart-product_qty input{
+    width: 30px;
+    text-align: center;
+}
+
+.del-product:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 /*-----------footer----------------*/
